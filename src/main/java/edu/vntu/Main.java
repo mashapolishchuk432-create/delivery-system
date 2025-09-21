@@ -1,5 +1,6 @@
 // Клас Main для запуску
 import java.util.*;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         DeliverySystem system = new DeliverySystem("FastDelivery", "1.0", "DeliveryCorp");
@@ -13,13 +14,13 @@ public class Main {
         client.preferredPayment = "Карта";
         client.isActive = true;
 
-        Product product = new Product(1, "Ноутбук", 1500.0);
-        product.category = "Електроніка";
+        Product product = new Product(1, "Корм для котів", 1500.0);
+        product.category = "Пет товари";
         product.weight = 2.5;
-        product.size = "15 inches";
+        product.size = "1 кг";
         product.stock = 10;
-        product.manufacturer = "Dell";
-        product.expiryDate = "N/A";
+        product.manufacturer = "Whiskas";
+        product.expiryDate = "2026-09-21";
         product.rating = 4.5;
 
         // Створення замовлення
@@ -39,7 +40,7 @@ public class Main {
         system.products.add(product);
         system.addOrder(order);
 
-        // Додаткові об’єкти для демонстрації
+        // Додаткові об’єкти
         Warehouse warehouse = new Warehouse(1, "Центральний склад", "Київ");
         warehouse.capacity = 1000;
         warehouse.currentStock = 500;
@@ -93,10 +94,21 @@ public class Main {
         vehicle.lastServiceDate = "2025-08-01";
         system.vehicles.add(vehicle);
 
+        // Створення маршруту
+        Route route = new Route(1, "Київ, склад", "Київ, вул. Хрещатик, 1");
+        route.distance = 10.5;
+        route.estimatedTime = "30 хвилин";
+        route.trafficStatus = "Нормальний";
+        route.checkpoints = new String[]{"Пункт 1: Склад", "Пункт 2: Центр"};
+        route.vehicle = vehicle; // Пов’язуємо з транспортом
+        route.courier = courier; // Пов’язуємо з кур’єром
+        route.status = "Заплановано";
+        system.routes.add(route); // Додаємо маршрут до системи
+
         // Запуск системи
         system.start();
 
-        // Вивід інформації про клієнта
+        // Вивід інформації
         System.out.println("\n--- Client Info ---");
         System.out.println("ID: " + client.id);
         System.out.println("Name: " + client.name);
@@ -108,7 +120,6 @@ public class Main {
         System.out.println("Preferred Payment: " + client.preferredPayment);
         System.out.println("Is Active: " + client.isActive);
 
-        // Вивід інформації про продукт
         System.out.println("\n--- Product Info ---");
         System.out.println("ID: " + product.id);
         System.out.println("Name: " + product.name);
@@ -121,7 +132,6 @@ public class Main {
         System.out.println("Expiry Date: " + product.expiryDate);
         System.out.println("Rating: " + product.rating);
 
-        // Вивід інформації про замовлення
         System.out.println("\n--- Order Info ---");
         System.out.println("ID: " + order.id);
         System.out.println("Client: " + order.client.name);
@@ -133,7 +143,6 @@ public class Main {
         System.out.println("Tracking Number: " + order.trackingNumber);
         System.out.println("Priority: " + order.priority);
 
-        // Вивід інформації про склад
         System.out.println("\n--- Warehouse Info ---");
         System.out.println("ID: " + warehouse.id);
         System.out.println("Name: " + warehouse.name);
@@ -146,7 +155,6 @@ public class Main {
         System.out.println("Close Time: " + warehouse.closeTime);
         System.out.println("Status: " + warehouse.status);
 
-        // Вивід інформації про кур'єра
         System.out.println("\n--- Courier Info ---");
         System.out.println("ID: " + courier.id);
         System.out.println("Name: " + courier.name);
@@ -158,7 +166,6 @@ public class Main {
         System.out.println("Status: " + courier.status);
         System.out.println("Salary: " + courier.salary);
 
-        // Вивід інформації про платіж
         System.out.println("\n--- Payment Info ---");
         System.out.println("ID: " + payment.id);
         System.out.println("Amount: $" + payment.amount);
@@ -169,7 +176,6 @@ public class Main {
         System.out.println("Currency: " + payment.currency);
         System.out.println("Receipt Number: " + payment.receiptNumber);
 
-        // Вивід інформації про рахунок
         System.out.println("\n--- Invoice Info ---");
         System.out.println("ID: " + invoice.id);
         System.out.println("Client: " + invoice.client.name);
@@ -181,7 +187,6 @@ public class Main {
         System.out.println("PDF File: " + invoice.pdfFile);
         System.out.println("Due Date: " + invoice.dueDate);
 
-        // Вивід інформації про транспорт
         System.out.println("\n--- Vehicle Info ---");
         System.out.println("ID: " + vehicle.id);
         System.out.println("Type: " + vehicle.type);
@@ -194,19 +199,32 @@ public class Main {
         System.out.println("Driver: " + vehicle.driver);
         System.out.println("Last Service Date: " + vehicle.lastServiceDate);
 
-        // Демонстрація методів
+        System.out.println("\n--- Route Info ---");
+        System.out.println("ID: " + route.id);
+        System.out.println("Start Location: " + route.startLocation);
+        System.out.println("End Location: " + route.endLocation);
+        System.out.println("Distance: " + route.distance + " km");
+        System.out.println("Estimated Time: " + route.estimatedTime);
+        System.out.println("Traffic Status: " + route.trafficStatus);
+        System.out.println("Checkpoints: " + String.join(", ", route.checkpoints));
+        System.out.println("Vehicle: " + route.vehicle.model);
+        System.out.println("Courier: " + route.courier.name);
+        System.out.println("Status: " + route.status);
+
         System.out.println("\n--- Demonstrating Methods ---");
-        warehouse.storeProduct(product); // Product stored: Ноутбук
-        warehouse.checkStock(); // Current stock: 500
-        courier.assignOrder(order); // Петро Петренко assigned to order 101
-        courier.completeDelivery(); // Петро Петренко completed a delivery.
-        payment.process(); // Status: Processed
-        invoice.generate(); // Invoice generated.
+        warehouse.storeProduct(product);
+        warehouse.checkStock();
+        courier.assignOrder(order);
+        courier.completeDelivery();
+        payment.process();
+        invoice.generate();
+        route.printRoute();
+        route.calculateTime();
+        route.addCheckpoint("Пункт 3: Офіс");
+        route.optimize();
+        route.updateStatus("В дорозі");
 
-        // Звіт
         system.generateReport();
-
-        // Завершення
         system.stop();
     }
 }
