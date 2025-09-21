@@ -1,6 +1,5 @@
-package edu.vntu;
 
-public class Invoice {
+class Invoice {
     int id;
     Order order;
     Client client;
@@ -37,4 +36,3 @@ public class Invoice {
         System.out.println("Printing invoice...");
     }
 }
-
