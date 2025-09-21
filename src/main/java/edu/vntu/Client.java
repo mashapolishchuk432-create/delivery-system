@@ -1,8 +1,6 @@
-package edu.vntu;
-
 import java.util.*;
 
-public class Client {
+class Client {
     int id;
     String name;
     String email;
