@@ -1,6 +1,4 @@
-package edu.vntu;
-
-public class Payment {
+class Payment {
     int id;
     Order order;
     double amount;
@@ -37,3 +35,4 @@ public class Payment {
         System.out.println("Receipt: " + receiptNumber);
     }
 }
+
