@@ -1,6 +1,4 @@
-package edu.vntu;
-
-public class Courier {
+class Courier {
     int id;
     String name;
     String phone;
@@ -40,3 +38,4 @@ public class Courier {
         return salary;
     }
 }
+
