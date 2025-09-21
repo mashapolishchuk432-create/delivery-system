@@ -1,6 +1,6 @@
-package edu.vntu;
 
-public class Vehicle {
+
+class Vehicle {
     int id;
     String type;
     String model;
@@ -32,6 +32,12 @@ public class Vehicle {
     public void scheduleService() {
         System.out.println("Service scheduled.");
     }
+
+    public void updateMileage(int km) {
+        mileage += km;
+    }
+}
+
 
     public void updateMileage(int km) {
         mileage += km;
