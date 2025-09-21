@@ -1,5 +1,6 @@
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 class DeliverySystem {
     String companyName;
@@ -13,7 +14,12 @@ class DeliverySystem {
     List<Payment> payments = new ArrayList<>();
     List<Invoice> invoices = new ArrayList<>();
     List<Vehicle> vehicles = new ArrayList<>();
-    List<Route> routes = new ArrayList<>(); // Додано список для маршрутів
+    List<Route> routes = new ArrayList<>();
+    List<Supplier> suppliers = new ArrayList<>(); // Додано для постачальників
+    List<SupportTicket> supportTickets = new ArrayList<>(); // Додано для тікетів
+    List<Review> reviews = new ArrayList<>(); // Додано для відгуків
+    List<Manager> managers = new ArrayList<>(); // Додано для менеджерів
+    List<Employee> employees = new ArrayList<>(); // Додано для співробітників
 
     public DeliverySystem(String companyName, String version, String owner) {
         this.companyName = companyName;
@@ -25,8 +31,28 @@ class DeliverySystem {
         orders.add(o);
     }
 
-    public void addRoute(Route r) { // Додано метод для додавання маршруту
+    public void addRoute(Route r) {
         routes.add(r);
+    }
+
+    public void addSupplier(Supplier s) {
+        suppliers.add(s);
+    }
+
+    public void addSupportTicket(SupportTicket t) {
+        supportTickets.add(t);
+    }
+
+    public void addReview(Review r) {
+        reviews.add(r);
+    }
+
+    public void addManager(Manager m) {
+        managers.add(m);
+    }
+
+    public void addEmployee(Employee e) {
+        employees.add(e);
     }
 
     public void start() {
