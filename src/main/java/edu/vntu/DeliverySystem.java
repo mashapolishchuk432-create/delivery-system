@@ -1,7 +1,6 @@
 
 import java.util.*;
 
-
 class DeliverySystem {
     String companyName;
     String version;
@@ -14,6 +13,7 @@ class DeliverySystem {
     List<Payment> payments = new ArrayList<>();
     List<Invoice> invoices = new ArrayList<>();
     List<Vehicle> vehicles = new ArrayList<>();
+    List<Route> routes = new ArrayList<>(); // Додано список для маршрутів
 
     public DeliverySystem(String companyName, String version, String owner) {
         this.companyName = companyName;
@@ -23,6 +23,10 @@ class DeliverySystem {
 
     public void addOrder(Order o) {
         orders.add(o);
+    }
+
+    public void addRoute(Route r) { // Додано метод для додавання маршруту
+        routes.add(r);
     }
 
     public void start() {
@@ -37,3 +41,4 @@ class DeliverySystem {
         System.out.println("Generating report...");
     }
 }
+
