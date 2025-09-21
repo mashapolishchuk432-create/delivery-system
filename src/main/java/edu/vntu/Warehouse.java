@@ -1,6 +1,4 @@
-package edu.vntu;
-
-public class Warehouse {
+class Warehouse {
     int id;
     String name;
     String location;
