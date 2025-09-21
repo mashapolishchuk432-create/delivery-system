@@ -1,8 +1,6 @@
-package edu.vntu;
-
 import java.util.List;
 
-public class Order {
+class Order {
     int id;
     Client client;
     List<Product> productList;
