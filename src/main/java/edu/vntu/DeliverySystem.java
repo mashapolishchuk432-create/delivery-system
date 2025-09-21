@@ -1,57 +1,39 @@
-package edu.vntu;
 
 import java.util.*;
 
 
-public class DeliverySystem {
-    String name;
-    String version;
+class DeliverySystem {
     String companyName;
-    List<Warehouse> warehouses;
-    List<Courier> couriers;
-    List<Client> clients;
-    List<Product> products;
-    List<Order> orders;
-    List<Payment> payments;
-    List<String> supportContacts;
+    String version;
+    String owner;
+    List<Client> clients = new ArrayList<>();
+    List<Product> products = new ArrayList<>();
+    List<Order> orders = new ArrayList<>();
+    List<Warehouse> warehouses = new ArrayList<>();
+    List<Courier> couriers = new ArrayList<>();
+    List<Payment> payments = new ArrayList<>();
+    List<Invoice> invoices = new ArrayList<>();
+    List<Vehicle> vehicles = new ArrayList<>();
 
-    public DeliverySystem(String name, String version, String companyName) {
-        this.name = name;
-        this.version = version;
+    public DeliverySystem(String companyName, String version, String owner) {
         this.companyName = companyName;
-        this.warehouses = new ArrayList<>();
-        this.couriers = new ArrayList<>();
-        this.clients = new ArrayList<>();
-        this.products = new ArrayList<>();
-        this.orders = new ArrayList<>();
-        this.payments = new ArrayList<>();
-        this.supportContacts = new ArrayList<>();
+        this.version = version;
+        this.owner = owner;
+    }
+
+    public void addOrder(Order o) {
+        orders.add(o);
     }
 
     public void start() {
-        System.out.println("Delivery System Started.");
+        System.out.println("System started.");
     }
 
     public void stop() {
-        System.out.println("Delivery System Stopped.");
-    }
-
-    public void addOrder(Order order) {
-        orders.add(order);
-        System.out.println("Order added: " + order.id);
-    }
-
-    public void cancelOrder(Order order) {
-        orders.remove(order);
-        System.out.println("Order canceled: " + order.id);
+        System.out.println("System stopped.");
     }
 
     public void generateReport() {
-        System.out.println("=== Delivery System Report ===");
-        System.out.println("Company: " + companyName);
-        System.out.println("Version: " + version);
-        System.out.println("Total Orders: " + orders.size());
-        System.out.println("Total Products: " + products.size());
-        System.out.println("Total Clients: " + clients.size());
+        System.out.println("Generating report...");
     }
 }
