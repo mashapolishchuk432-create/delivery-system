@@ -38,4 +38,3 @@ class Courier {
         return salary;
     }
 }
-
