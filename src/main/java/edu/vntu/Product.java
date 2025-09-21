@@ -1,6 +1,4 @@
-package edu.vntu;
-
-public class Product {
+class Product {
     int id;
     String name;
     String category;
