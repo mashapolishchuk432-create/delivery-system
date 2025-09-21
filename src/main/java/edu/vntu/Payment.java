@@ -1,3 +1,5 @@
+
+
 class Payment {
     int id;
     Order order;
@@ -35,4 +37,3 @@ class Payment {
         System.out.println("Receipt: " + receiptNumber);
     }
 }
-
