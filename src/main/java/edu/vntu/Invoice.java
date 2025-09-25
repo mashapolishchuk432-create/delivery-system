@@ -35,4 +35,17 @@ class Invoice {
     public void print() {
         System.out.println("Printing invoice...");
     }
+
+    @Override 
+    public String toString() {
+        return "\nInvoice ID " + id + 
+        "\nClient " + client.name + 
+        "\nDate " + date + 
+        "\nTotal " + total + 
+        "\nTax " + tax + 
+        "\nDiscount " + discount + 
+        "\nPayment status " + paymentStatus + 
+        "\nPDF file " + pdfFile + 
+        "\nDue date " + dueDate;
+    }
 }
