@@ -1,3 +1,4 @@
+
 class Courier {
     int id;
     String name;
@@ -37,4 +38,19 @@ class Courier {
     public double calculateSalary() {
         return salary;
     }
+
+    @Override
+    public String toString(){
+        return "\nCouruer id " + id +
+        "\nName " + name + 
+        "\nPhone " + phone +
+        "\nVehicle " + vehicle +
+        "\nRating " + rating + 
+        "\nCompleted delieveries " + completedDeliveries +
+        "\nWorking hours " + workingHours + 
+        "\nStatus " + status + 
+        "\nSalary " +salary;
+    }
 }
+
+
