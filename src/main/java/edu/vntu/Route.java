@@ -35,5 +35,19 @@ class Route {
     public void printRoute() {
         System.out.println("Route from " + startLocation + " to " + endLocation);
     }
-}
 
+    @Override
+    public String toString() {
+        return "\nRoute ID " + id + 
+        "\nStart location " + startLocation + 
+        "\nEnd location " + endLocation + 
+        "\nDistance " + distance + 
+        "\nEstimated time " + estimatedTime + 
+        "\nTraffic status " + trafficStatus + 
+        "\nCheckpoints " + String.join(",",checkpoints) + 
+        "\nVehicle " + vehicle.model + 
+        "\nCourier " + courier.name + 
+        "\nStatus " + status;
+    }
+
+}
