@@ -35,4 +35,20 @@ class Warehouse {
     public void generateInventoryReport() {
         System.out.println("Inventory Report for Warehouse " + name);
     }
+
+    @Override
+    public String toString(){
+        return "\nWarehouse id " + id + 
+        "\nName " + name + 
+        "\nLocation " + location + 
+        "\nCapacity " + capacity +
+        "\nCurrent stock " + currentStock +
+        "\nManager " + manager + 
+        "\nContact " + contact + 
+        "\nOpen time " + openTime +
+        "\nClose time " + closeTime +
+        "\nStatus " + status;
+    }
+
 }
+
