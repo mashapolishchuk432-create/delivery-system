@@ -34,4 +34,19 @@ public class Supplier {
     public void resumeSupply() {
         isActive = true;
     }
+
+    @Override
+    public String toString(){
+        return "\nSupplier ID " + id + 
+        "\nName " + name + 
+        "\nProducts " + String.join(", ", products) + 
+        "\nContact " + contact + 
+        "\nContract terms " + contractTerms + 
+        "\nRating " +rating + 
+        "\nDeliveries " + String.join(", ",deliveries) + 
+        "\nLocation " + location + 
+        "\nPayment terms " + paymentTerms + 
+        "\nIs active " + isActive;
+    }
+
 }
