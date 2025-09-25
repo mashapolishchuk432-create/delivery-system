@@ -34,4 +34,19 @@ public class SupportTicket {
     public void assignToAgent(String agent) {
         this.assignedTo = agent;
     }
+
+    @Override
+    public String toString(){
+        return "\nSupport ticket ID " + id + 
+        "\nClient " + client.name + 
+        "\nSubject " + subject + 
+        "\nMessage " + message + 
+        "\nStatus " + status + 
+        "\nPriority " + priority + 
+        "\nCrated at " + createdAt + 
+        "\nUpdated at " + updatedAt + 
+        "\nAssigned to " + assignedTo + 
+        "\nResolition " + resolution; 
+    }
+
 }
