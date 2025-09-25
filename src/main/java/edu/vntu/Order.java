@@ -41,4 +41,18 @@ class Order {
     public void printInvoice() {
         System.out.println("Invoice for Order #" + id);
     }
+    @Override 
+    public String toString(){
+        return "\nOrder Id " + id + 
+        "\nClient " + client.name + 
+        "\nTotal price " + totalPrice + 
+        "\nStatus " + status + 
+        "\nAddress " + address + 
+        "\nDelievery date " + deliveryDate +
+        "\nPayment method " + paymentMethod +
+        "\nTracking number " + trackingNumber + 
+        "\nPriority " + priority;
+
+    }
 }
+
