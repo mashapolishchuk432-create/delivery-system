@@ -39,5 +39,20 @@ class Client {
     public void contactSupport() {
         System.out.println("Client contacted support.");
     }
+
+    @Override
+    public String toString(){
+        return "Id client " + id +
+        "\nName" + name +
+       "\nEmail " + email +
+        "\nPhone " + phone +
+        "\nAddress" + address +
+        "\nRegistration date" + registrationDate +
+        "\nOrders " + orders + 
+        "\nLoyalty points " + loyaltyPoints + 
+        "\nPreferred payment " + preferredPayment + 
+        "\nActive " + isActive;
+    }
+    
 }
 
