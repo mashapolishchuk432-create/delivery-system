@@ -34,4 +34,19 @@ public class Manager {
     public void fireEmployee(String empName) {
         System.out.println(empName + " has been fired.");
     }
+
+@Override
+public String toString() {
+    return "\nManager id " + id + 
+    "\nName " + name + 
+    "\nTeam " + String.join(", ", team) + 
+    "\nDeparment " + department + 
+    "\nSalary "  + salary + 
+    "\nPerformance " + performance + 
+    "\nReports " +String.join(",", reports) + 
+    "\nMeetings " + String.join(",", meetings) + 
+    "\nContacts " + contact +
+    "\nStatus " + status; 
+}
+
 }
