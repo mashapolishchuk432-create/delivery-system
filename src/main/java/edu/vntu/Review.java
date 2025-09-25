@@ -35,4 +35,19 @@ public class Review {
     public void reject() {
         status = "Rejected";
     }
+
+@Override
+public String toString(){
+    return "\nReview ID" + id + 
+    "\nClient " + client.name + 
+    "\nProduct " + product.name + 
+    "\nRating " + rating + 
+    "\nComment " + comment + 
+    "\nDate " + date + 
+    "\nOrder id" + orderId + 
+    "\nCourier rating " + courierRating + 
+    "\nIs verified " + isVerified + 
+    "\nStatus " + status;
+}
+
 }
