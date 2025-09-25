@@ -35,4 +35,19 @@ class Product {
     public void markAsUnavailable() {
         this.stock = 0;
     }
+
+    @Override
+    public String toString(){
+      return "\nProduct Id " + id + 
+      "\nName " + name + 
+      "\nCategory "+ category +
+      "\nPrice " + price + 
+      "\nWeight " + weight +
+      "\nSize " + size + 
+      "\nStock " + stock + 
+      "\nManufactuter " + manufacturer + 
+      "\nExpiry date " + expiryDate + 
+      "\nRating " + rating;
+    }
 }
+
