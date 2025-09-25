@@ -34,4 +34,19 @@ public class Employee {
     public void requestVacation() {
         System.out.println(name + " requested vacation.");
     }
+
+    @Override
+    public String toString(){
+        return "\nEmployee id " + id +
+        "\nName " + name + 
+        "\nRole " + role + 
+        "\nDepartment " + department + 
+        "\nSalary " + salary + 
+        "\nHire date " + hireDate + 
+        "\nContact "  + contact + 
+        "\nStatus " + status + 
+        "\nworking hours " + workingHours + 
+        "\nPerformance rating " + performanceRating;
+    }
+
 }
