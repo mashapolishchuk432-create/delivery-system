@@ -36,10 +36,20 @@ class Vehicle {
     public void updateMileage(int km) {
         mileage += km;
     }
-}
 
-
-    public void updateMileage(int km) {
-        mileage += km;
+    @Override
+    public String toString(){
+        return "\nVehicle id " + id + 
+        "\nType " + type +
+        "\nModel " + model + 
+        "\nLicense Plate " +licensePlate + 
+        "\nCapacity " + capacity + 
+        "\nFuel Level " + fuelLevel + 
+        "\nMileage " + mileage + 
+        "\nStaus " + status + 
+        "\nDriver " + driver + 
+        "\nLast service date " + lastServiceDate;
     }
+
 }
+
