@@ -1,4 +1,3 @@
-// Клас Main для запуску
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
@@ -163,166 +162,46 @@ public class Main {
 
         // Вивід інформації
         System.out.println("\n--- Client Info ---");
-        System.out.println("ID: " + client.id);
-        System.out.println("Name: " + client.name);
-        System.out.println("Email: " + client.email);
-        System.out.println("Phone: " + client.phone);
-        System.out.println("Address: " + client.address);
-        System.out.println("Registration Date: " + client.registrationDate);
-        System.out.println("Loyalty Points: " + client.loyaltyPoints);
-        System.out.println("Preferred Payment: " + client.preferredPayment);
-        System.out.println("Is Active: " + client.isActive);
+        System.out.println(client);
 
         System.out.println("\n--- Product Info ---");
-        System.out.println("ID: " + product.id);
-        System.out.println("Name: " + product.name);
-        System.out.println("Category: " + product.category);
-        System.out.println("Price: $" + product.price);
-        System.out.println("Weight: " + product.weight);
-        System.out.println("Size: " + product.size);
-        System.out.println("Stock: " + product.stock);
-        System.out.println("Manufacturer: " + product.manufacturer);
-        System.out.println("Expiry Date: " + product.expiryDate);
-        System.out.println("Rating: " + product.rating);
+        System.out.println(product);
 
         System.out.println("\n--- Order Info ---");
-        System.out.println("ID: " + order.id);
-        System.out.println("Client: " + order.client.name);
-        System.out.println("Total Price: $" + order.totalPrice);
-        System.out.println("Status: " + order.status);
-        System.out.println("Address: " + order.address);
-        System.out.println("Delivery Date: " + order.deliveryDate);
-        System.out.println("Payment Method: " + order.paymentMethod);
-        System.out.println("Tracking Number: " + order.trackingNumber);
-        System.out.println("Priority: " + order.priority);
+        System.out.println(order);
 
         System.out.println("\n--- Warehouse Info ---");
-        System.out.println("ID: " + warehouse.id);
-        System.out.println("Name: " + warehouse.name);
-        System.out.println("Location: " + warehouse.location);
-        System.out.println("Capacity: " + warehouse.capacity);
-        System.out.println("Current Stock: " + warehouse.currentStock);
-        System.out.println("Manager: " + warehouse.manager);
-        System.out.println("Contact: " + warehouse.contact);
-        System.out.println("Open Time: " + warehouse.openTime);
-        System.out.println("Close Time: " + warehouse.closeTime);
-        System.out.println("Status: " + warehouse.status);
+        System.out.println(warehouse);
 
         System.out.println("\n--- Courier Info ---");
-        System.out.println("ID: " + courier.id);
-        System.out.println("Name: " + courier.name);
-        System.out.println("Phone: " + courier.phone);
-        System.out.println("Vehicle: " + courier.vehicle);
-        System.out.println("Rating: " + courier.rating);
-        System.out.println("Completed Deliveries: " + courier.completedDeliveries);
-        System.out.println("Working Hours: " + courier.workingHours);
-        System.out.println("Status: " + courier.status);
-        System.out.println("Salary: " + courier.salary);
+        System.out.println(courier);
 
         System.out.println("\n--- Payment Info ---");
-        System.out.println("ID: " + payment.id);
-        System.out.println("Amount: $" + payment.amount);
-        System.out.println("Method: " + payment.method);
-        System.out.println("Status: " + payment.status);
-        System.out.println("Transaction ID: " + payment.transactionId);
-        System.out.println("Date: " + payment.date);
-        System.out.println("Currency: " + payment.currency);
-        System.out.println("Receipt Number: " + payment.receiptNumber);
+        System.out.println(payment);
 
         System.out.println("\n--- Invoice Info ---");
-        System.out.println("ID: " + invoice.id);
-        System.out.println("Client: " + invoice.client.name);
-        System.out.println("Date: " + invoice.date);
-        System.out.println("Total: $" + invoice.total);
-        System.out.println("Tax: " + invoice.tax);
-        System.out.println("Discount: " + invoice.discount);
-        System.out.println("Payment Status: " + invoice.paymentStatus);
-        System.out.println("PDF File: " + invoice.pdfFile);
-        System.out.println("Due Date: " + invoice.dueDate);
+        System.out.println(invoice);
 
         System.out.println("\n--- Vehicle Info ---");
-        System.out.println("ID: " + vehicle.id);
-        System.out.println("Type: " + vehicle.type);
-        System.out.println("Model: " + vehicle.model);
-        System.out.println("License Plate: " + vehicle.licensePlate);
-        System.out.println("Capacity: " + vehicle.capacity);
-        System.out.println("Fuel Level: " + vehicle.fuelLevel);
-        System.out.println("Mileage: " + vehicle.mileage);
-        System.out.println("Status: " + vehicle.status);
-        System.out.println("Driver: " + vehicle.driver);
-        System.out.println("Last Service Date: " + vehicle.lastServiceDate);
+        System.out.println(vehicle);
 
         System.out.println("\n--- Route Info ---");
-        System.out.println("ID: " + route.id);
-        System.out.println("Start Location: " + route.startLocation);
-        System.out.println("End Location: " + route.endLocation);
-        System.out.println("Distance: " + route.distance + " km");
-        System.out.println("Estimated Time: " + route.estimatedTime);
-        System.out.println("Traffic Status: " + route.trafficStatus);
-        System.out.println("Checkpoints: " + String.join(", ", route.checkpoints));
-        System.out.println("Vehicle: " + route.vehicle.model);
-        System.out.println("Courier: " + route.courier.name);
-        System.out.println("Status: " + route.status);
+        System.out.println(route);
 
         System.out.println("\n--- Supplier Info ---");
-        System.out.println("ID: " + supplier.id);
-        System.out.println("Name: " + supplier.name);
-        System.out.println("Products: " + String.join(", ", supplier.products));
-        System.out.println("Contact: " + supplier.contact);
-        System.out.println("Contract Terms: " + supplier.contractTerms);
-        System.out.println("Rating: " + supplier.rating);
-        System.out.println("Deliveries: " + String.join(", ", supplier.deliveries));
-        System.out.println("Location: " + supplier.location);
-        System.out.println("Payment Terms: " + supplier.paymentTerms);
-        System.out.println("Is Active: " + supplier.isActive);
+        System.out.println(supplier);
 
         System.out.println("\n--- Support Ticket Info ---");
-        System.out.println("ID: " + ticket.id);
-        System.out.println("Client: " + ticket.client.name);
-        System.out.println("Subject: " + ticket.subject);
-        System.out.println("Message: " + ticket.message);
-        System.out.println("Status: " + ticket.status);
-        System.out.println("Priority: " + ticket.priority);
-        System.out.println("Created At: " + ticket.createdAt);
-        System.out.println("Updated At: " + ticket.updatedAt);
-        System.out.println("Assigned To: " + ticket.assignedTo);
-        System.out.println("Resolution: " + ticket.resolution);
+        System.out.println(ticket);
 
         System.out.println("\n--- Review Info ---");
-        System.out.println("ID: " + review.id);
-        System.out.println("Client: " + review.client.name);
-        System.out.println("Product: " + review.product.name);
-        System.out.println("Rating: " + review.rating);
-        System.out.println("Comment: " + review.comment);
-        System.out.println("Date: " + review.date);
-        System.out.println("Order ID: " + review.orderId);
-        System.out.println("Courier Rating: " + review.courierRating);
-        System.out.println("Is Verified: " + review.isVerified);
-        System.out.println("Status: " + review.status);
+        System.out.println(review);
 
         System.out.println("\n--- Manager Info ---");
-        System.out.println("ID: " + manager.id);
-        System.out.println("Name: " + manager.name);
-        System.out.println("Team: " + String.join(", ", manager.team));
-        System.out.println("Department: " + manager.department);
-        System.out.println("Salary: " + manager.salary);
-        System.out.println("Performance: " + manager.performance);
-        System.out.println("Reports: " + String.join(", ", manager.reports));
-        System.out.println("Meetings: " + String.join(", ", manager.meetings));
-        System.out.println("Contact: " + manager.contact);
-        System.out.println("Status: " + manager.status);
+        System.out.println(manager);
 
         System.out.println("\n--- Employee Info ---");
-        System.out.println("ID: " + employee.id);
-        System.out.println("Name: " + employee.name);
-        System.out.println("Role: " + employee.role);
-        System.out.println("Department: " + employee.department);
-        System.out.println("Salary: " + employee.salary);
-        System.out.println("Hire Date: " + employee.hireDate);
-        System.out.println("Contact: " + employee.contact);
-        System.out.println("Status: " + employee.status);
-        System.out.println("Working Hours: " + employee.workingHours);
-        System.out.println("Performance Rating: " + employee.performanceRating);
+        System.out.println(employee);
 
         System.out.println("\n--- Demonstrating Methods ---");
         warehouse.storeProduct(product);
@@ -349,5 +228,6 @@ public class Main {
 
         system.generateReport();
         system.stop();
+
     }
 }
