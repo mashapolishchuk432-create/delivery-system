@@ -36,4 +36,17 @@ class Payment {
     public void generateReceipt() {
         System.out.println("Receipt: " + receiptNumber);
     }
+
+    @Override
+    public String toString() {
+        return "\nPayment id " + id +
+        "\nAmount " + amount + 
+        "\nMethod " + method + 
+        "\nStatus " + status + 
+        "\nTransaction ID " + transactionId + 
+        "\nDate " + date + 
+        "\nCurrency " + currency +
+        "\nReceipt number " + receiptNumber;
+    }
+
 }
