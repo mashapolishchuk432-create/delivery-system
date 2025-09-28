@@ -1,3 +1,5 @@
+package edu.vntu;
+
 public class Manager {
     int id;
     String name;

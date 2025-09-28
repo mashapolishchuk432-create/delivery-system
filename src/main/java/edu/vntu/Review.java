@@ -1,3 +1,5 @@
+package edu.vntu;
+
 public class Review {
     int id;
     Client client;

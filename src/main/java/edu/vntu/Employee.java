@@ -1,3 +1,5 @@
+package edu.vntu;
+
 public class Employee {
     int id;
     String name;

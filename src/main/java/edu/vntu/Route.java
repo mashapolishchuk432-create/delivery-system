@@ -1,3 +1,6 @@
+package edu.vntu;
+
+
 class Route {
     int id;
     String startLocation;

@@ -1,3 +1,5 @@
+package edu.vntu;
+
 class Product {
     int id;
     String name;

@@ -1,3 +1,5 @@
+package edu.vntu;
+
 
 class Invoice {
     int id;

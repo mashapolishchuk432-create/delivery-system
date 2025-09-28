@@ -1,3 +1,5 @@
+package edu.vntu;
+
 import java.util.*;
 
 class Client {

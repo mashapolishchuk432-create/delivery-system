@@ -1,3 +1,6 @@
+package edu.vntu;
+
+
 public class Supplier {
     int id;
     String name;

@@ -1,3 +1,6 @@
+package edu.vntu;
+
+
 class Warehouse {
     int id;
     String name;

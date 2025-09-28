@@ -1,3 +1,5 @@
+package edu.vntu;
+
 public class SupportTicket {
     int id;
     Client client;
